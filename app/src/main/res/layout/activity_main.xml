@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Заголовок -->
+
+    <!-- Поле для ввода города -->
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="Погода в городе"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextCity"
+        android:layout_width="310dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Введите город"
+        android:inputType="text"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle" />
+
+    <!-- Кнопка для отправки запроса -->
+    <Button
+        android:id="@+id/buttonGetWeather"
+        android:layout_width="306dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Получить погоду"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextCity" />
+
+    <!-- Картинка с иконкой погоды -->
+    <!-- Текст с описанием погоды -->
+
+    <ImageView
+        android:id="@+id/ivWeatherIcon"
+        android:layout_width="82dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="164dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWeatherDescription" />
+
+    <TextView
+        android:id="@+id/textViewWeatherDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+
+        android:text="Описание погоды"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGetWeather" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
